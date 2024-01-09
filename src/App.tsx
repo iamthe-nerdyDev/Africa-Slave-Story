@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Home, Mobile } from "./components";
+import { Mobile, Router } from "./components";
 import { useWebContext } from "./context/ContextProvider";
 import Audio from "./assets/background-audio.mp3";
 
@@ -31,12 +31,15 @@ const App: React.FC = () => {
         <Mobile />
       </main>
 
-      <main className="d-none d-md-block">
-        {/** Show a different page for tablet &> users */}
-        <Home />
+      <main className="d-none d-md-block wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+
+        <Router />
       </main>
 
-      <audio className="audio" ref={audioRef} controls={true}>
+      <audio className="audio" ref={audioRef} playsInline loop>
         <source src={Audio} type="audio/mp3" />
         Your browser does not support the audio tag.
       </audio>
