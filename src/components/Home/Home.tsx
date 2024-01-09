@@ -1,7 +1,16 @@
 import React from "react";
 import { Africa, Headphone } from "../../icons";
+import { useWebContext } from "../../context/ContextProvider";
 
 const Home: React.FC = () => {
+  const { togglePlayAudio, redirect } = useWebContext();
+
+  function start() {
+    togglePlayAudio();
+
+    redirect("/map");
+  }
+
   return (
     <section className="home">
       <div id="stars"></div>
@@ -9,7 +18,7 @@ const Home: React.FC = () => {
       <div id="stars3"></div>
 
       <div className="main">
-        <div className="header d-flex align-items-center pt-5 pt-lg-3 pt-xl-5">
+        <div className="header d-flex align-items-center pt-4 pt-lg-3 pt-xl-5">
           <h1>Voices of Liberation in</h1>
           <Africa />
         </div>
@@ -18,7 +27,8 @@ const Home: React.FC = () => {
           <p>
             Whispers from the shadows beckon...
             <br />
-            Dare to listen? <span>Click to Start</span>
+            Dare to listen?&nbsp;
+            <span onClick={start}>Click to Start</span>
           </p>
         </div>
 
