@@ -35,8 +35,9 @@ const App: React.FC = () => {
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
-
-        <Router />
+        <div className="mask">
+          <Router />
+        </div>
       </main>
 
       <audio className="audio" ref={audioRef} playsInline loop>
