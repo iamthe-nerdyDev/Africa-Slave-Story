@@ -84,7 +84,11 @@ const SingleCountry: React.FC<{}> = () => {
         </div>
 
         <div className="video">
-          <iframe src="/video.mp4" />
+          <iframe
+            src="https://www.youtube.com/embed/D2NkA-7WILc?si=raEQwlJJJpelEJ0Z"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
         </div>
       </div>
     </React.Fragment>
