@@ -2,8 +2,8 @@ import React from "react";
 import { Africa, Headphone } from "../../icons";
 import { useWebContext } from "../../context/ContextProvider";
 
-const Home: React.FC = () => {
-  const { redirect } = useWebContext();
+const Home: React.FC<{}> = () => {
+  const { redirect, togglePlayAudio } = useWebContext();
 
   return (
     <section className="home">
@@ -18,7 +18,14 @@ const Home: React.FC = () => {
             Whispers from the shadows beckon...
             <br />
             Dare to listen?&nbsp;
-            <span onClick={() => redirect("/map")}>Click to Start</span>
+            <span
+              onClick={() => {
+                togglePlayAudio();
+                redirect("/map");
+              }}
+            >
+              Click to Start
+            </span>
           </p>
         </div>
 

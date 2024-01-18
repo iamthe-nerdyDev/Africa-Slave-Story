@@ -55,7 +55,66 @@ import {
   Zimbabwe,
 } from "./Flags";
 
-export const herosInfo = [{}];
+export const herosInfo = [
+  {
+    code: "NG",
+    data: [
+      {
+        name: "Oba Ovonramwen of Benin",
+        videoURL: "#",
+      },
+      {
+        name: "King Koko of Nembe",
+        videoURL: "#",
+      },
+    ],
+  },
+  {
+    code: "BJ",
+    data: [
+      {
+        name: "King Béhanzin",
+        videoURL: "#",
+      },
+    ],
+  },
+  {
+    code: "KE",
+    data: [
+      {
+        name: "Dedan Kimathi and the Mau Mau Resistance",
+        videoURL: "#",
+      },
+    ],
+  },
+  {
+    code: "DZ",
+    data: [
+      {
+        name: "King Béhanzin",
+        videoURL: "#",
+      },
+    ],
+  },
+  {
+    code: "ZA",
+    data: [
+      {
+        name: "Cetshwayo kaMpande",
+        videoURL: "#",
+      },
+    ],
+  },
+  {
+    code: "NA",
+    data: [
+      {
+        name: "Cetshwayo kaMpande",
+        videoURL: "#",
+      },
+    ],
+  },
+];
 
 export type MapData = {
   code: string;
@@ -76,7 +135,7 @@ export const mapData: MapData[] = [
   },
   {
     code: "BJ",
-    name: "Benin",
+    name: "Benin Republic",
     logo: <Benin />,
   },
   {

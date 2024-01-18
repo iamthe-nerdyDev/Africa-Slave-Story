@@ -2,7 +2,7 @@ import React from "react";
 import { useWebContext } from "../../context/ContextProvider";
 import { Home, Map, SingleCountry } from "..";
 
-const Router: React.FC = () => {
+const Router: React.FC<{}> = () => {
   const { page, value } = useWebContext();
 
   return page === "/" ? (

@@ -5,7 +5,7 @@ import Audio from "./assets/background-audio.mp3";
 
 import "./main.css";
 
-const App: React.FC = () => {
+const App: React.FC<{}> = () => {
   const { playAudio, isMuted } = useWebContext();
 
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -16,13 +16,12 @@ const App: React.FC = () => {
     if (audioElement) {
       audioElement.muted = isMuted;
 
-      audioElement.play();
+      if (playAudio) audioElement.play();
+      else audioElement.pause();
     }
   }
 
-  useEffect(() => {
-    if (playAudio) handlePlay();
-  }, [isMuted, playAudio]);
+  useEffect(() => handlePlay(), [isMuted, playAudio]);
 
   return (
     <React.Fragment>

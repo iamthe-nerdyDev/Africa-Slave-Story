@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 export type ContextProps = {
   page: string;
@@ -25,7 +25,7 @@ export const useWebContext = () => useContext(WebContext);
 
 type Props = { children?: React.ReactNode };
 
-const WebProvider = (props: Props) => {
+const WebProvider: React.FC<Props> = (props) => {
   const [page, setPage] = useState<string>("/");
   const [isMuted, setIsMuted] = useState<boolean>(false);
   const [value, setValue] = useState<ContextProps["value"]>();
