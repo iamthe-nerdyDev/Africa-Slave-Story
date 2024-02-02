@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Typewriter from "typewriter-effect";
 import { useWebContext } from "../../context/ContextProvider";
 import AfricaMap from "./tools/AfricaMap";
 import { MapData, mapData } from "./tools";
 
 const Map: React.FC<{}> = () => {
-  const [finishedTyping, setFinishedTyping] = useState<boolean>(false);
+  const [finishedTyping, setFinishedTyping] = useState<boolean>(true);
   const [selectedCountry, setSelectedCountry] = useState<string>();
   const [selectedCountryData, setSelectedCountryData] = useState<MapData>();
 
@@ -13,53 +13,75 @@ const Map: React.FC<{}> = () => {
     setSelectedCountryData(mapData.find((country) => country.code == selectedCountry));
   }, [selectedCountry]);
 
-  const { isMuted, toggleMute, value } = useWebContext();
+  const { isMuted, toggleMute, value, setParams } = useWebContext();
 
-  const delimeter = `<p class="type-u"><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span></p>`;
+  // const delimeter = `<p class="type-u"><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span></p>`;
+  const delimeter = "<br/><br/>";
 
   useEffect(() => {
     if (value && value.isRedirect == true) setFinishedTyping(true);
   }, [value]);
 
+  const divRef = useRef<any>(null);
+
+  useEffect(() => {
+    const scrollTimeout = setTimeout(() => {
+      if (divRef.current) {
+        divRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+          inline: "nearest",
+        });
+      }
+    }, 3000);
+
+    return () => clearTimeout(scrollTimeout);
+  }, []);
+
   return (
     <React.Fragment>
-      <div className={`typewriter-box ${finishedTyping ? "d-none" : "d-block"}`}>
+      <div className={`typewriter-box ${finishedTyping ? "d-none" : "d-block"}`} ref={divRef}>
         <Typewriter
+          options={{ delay: 40 }}
           onInit={(typewriter) => {
             typewriter
               .typeString(
                 "<p class='type'>In the beginning, Africa stood proud, A land of untold tales, strong and loud. Under the vast sky, a continent&apos;s embrace, Rich cultures woven, each in its own grace.</p>"
               )
-              .typeString(delimeter)
+              .pasteString(delimeter, null)
               .typeString(
                 "<p class='type'>Savannas stretched with a golden hue, Mountains whispered tales, ancient and true. Rivers carved stories through the ancient land, Nature&apos;s masterpiece, crafted by a divine hand.</p>"
               )
-              .typeString(delimeter)
+              .pasteString(delimeter, null)
               .typeString(
                 "<p class='type'>In the heart, the drumbeats of a thousand tribes, Echoes of unity in diverse vibes. The sun painted patterns on the desert's face, A dance of resilience, a rhythmic trace.</p>"
               )
-              .typeString(delimeter)
+              .pasteString(delimeter, null)
               .typeString(
                 "<p class='type'>Forests whispered secrets to the open air, Where every creature found its haven and lair. Elephants roamed in majestic might, A symphony of life, a harmonious sight.</p>"
               )
-              .typeString(delimeter)
+              .pasteString(delimeter, null)
               .typeString(
                 "<p class='type'>Great Zimbabwe rose with stones that speak, Of a civilization strong, not meek. Timbuktu&apos;s wisdom flowed in written streams, A wealth of knowledge, beyond wildest dreams.</p>"
               )
-              .typeString(delimeter)
+              .pasteString(delimeter, null)
               .typeString(
                 "<p class='type'>Great Benin rose with stones that speak, Of a kingdom strong, not meek. Ife&apos;s wisdom flowed in artistic streams, A wealth of culture, beyond wildest dreams.</p>"
               )
-              .typeString(delimeter)
+              .pasteString(delimeter, null)
               .typeString(
                 "<p class='type'>But then, a shadow crept across the land, Foreign sails approached, a shifting sand. Colonial masters with a different claim, To alter destinies, to play a different game.</p>"
               )
-              .typeString(delimeter)
+              .pasteString(delimeter, null)
               .typeString(
                 "<p class='type'>In the beginning, Africa knew its own tune, A continent dancing beneath the moon. Yet, the winds of change began to blow, As history unfolded, a tale of ebb and flow.</p>"
               )
-              .typeString(delimeter)
-              .callFunction(() => setFinishedTyping(true))
+              .pasteString(delimeter, null)
+              .pauseFor(2000)
+              .callFunction(() => {
+                setFinishedTyping(true);
+                setParams({ finishedTyping: true });
+              })
               .start();
           }}
         />

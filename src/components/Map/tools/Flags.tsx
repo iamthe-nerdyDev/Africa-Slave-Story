@@ -1,6 +1,6 @@
 export const Algeria = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
       <path fill="#fff" d="M0 0h900v600H0z"></path>
       <path fill="#006233" d="M0 0h450v600H0z"></path>
       <path
@@ -13,7 +13,7 @@ export const Algeria = () => {
 
 export const Angola = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
       <path d="M0 0h900v600H0z"></path>
       <path fill="#cc092f" d="M0 0h900v300H0z"></path>
       <path
@@ -37,7 +37,7 @@ export const Angola = () => {
 
 export const Benin = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
       <path fill="#e8112d" d="M0 0h900v600H0z"></path>
       <path fill="#fcd116" d="M0 0h900v300H0z"></path>
       <path fill="#008751" d="M0 0h360v600H0z"></path>
@@ -60,9 +60,7 @@ export const BurkinaFaso = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="900"
-      height="600"
-      version="1"
+      viewBox="0 0 900 600"
     >
       <path fill="#009e49" d="M0 0H900V600H0z"></path>
       <path fill="#ef2b2d" d="M0 0H900V300H0z"></path>
@@ -118,7 +116,7 @@ export const Burundi = () => {
 
 export const Cameroon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" version="1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
       <path fill="#007a5e" d="M0 0h400v600H0z"></path>
       <path fill="#ce1126" d="M300 0h400v600H300z"></path>
       <path
@@ -134,8 +132,7 @@ export const CapeVerde = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="1020"
-      height="600"
+      viewBox="0 0 1020 600"
     >
       <path fill="#003893" d="M0 0h1020v600H0z"></path>
       <path fill="#fff" d="M0 300h1020v150H0z"></path>
@@ -177,7 +174,7 @@ export const CentralAfricanRepublic = () => {
 
 export const Chad = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
       <path fill="#c60c30" d="M0 0h900v600H0z"></path>
       <path fill="#fecb00" d="M0 0h600v600H0z"></path>
       <path fill="#002664" d="M0 0h300v600H0z"></path>
@@ -215,7 +212,7 @@ export const Comoros = () => {
 
 export const IvoryCoast = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
       <path fill="#009e60" d="M0 0h900v600H0z"></path>
       <path fill="#fff" d="M0 0h600v600H0z"></path>
       <path fill="#f77f00" d="M0 0h300v600H0z"></path>
@@ -225,7 +222,7 @@ export const IvoryCoast = () => {
 
 export const DemocraticRepublicOfCongo = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
       <path fill="#007fff" d="M0 0H800V600H0z"></path>
       <path
         fill="#f7d618"
@@ -238,7 +235,7 @@ export const DemocraticRepublicOfCongo = () => {
 
 export const Djibouti = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
       <path fill="#6ab2e7" d="M0 0h900v600H0z"></path>
       <path fill="#12ad2b" d="M0 300h900v300H0z"></path>
       <path fill="#fff" d="M0 0v600l259.808-150 259.807-150-259.807-150z"></path>
@@ -257,6 +254,7 @@ export const Egypt = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="900"
       height="600"
+      viewBox="0 0 900 600"
     >
       <defs>
         <clipPath id="c" clipPathUnits="userSpaceOnUse">
@@ -430,7 +428,7 @@ export const EquatorialGuinea = () => {
 
 export const Eritrea = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" version="1">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
       <path fill="#ea0437" d="M0 0H1000V500H0z"></path>
       <path fill="#4189dd" d="M0 500h1000V250"></path>
       <path fill="#12ad2b" d="M0 0h1000v250"></path>
@@ -449,6 +447,7 @@ export const Eswatini = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="900"
       height="600"
+      viewBox="0 0 900 600"
     >
       <path fill="#3e5eb9" d="M0 0h900v600H0z"></path>
       <path fill="#ffd900" d="M0 112.5h900v375H0z"></path>
@@ -528,6 +527,7 @@ export const Ethiopia = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="1200"
       height="600"
+      viewBox="0 0 1200 600"
     >
       <path fill="#da121a" d="M0 0h1200v600H0z"></path>
       <path fill="#fcdd09" d="M0 0h1200v400H0z"></path>
@@ -552,7 +552,7 @@ export const Ethiopia = () => {
 
 export const Gabon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750">
       <path fill="#3a75c4" d="M0 0h1000v750H0z"></path>
       <path fill="#fcd116" d="M0 0h1000v500H0z"></path>
       <path fill="#009e60" d="M0 0h1000v250H0z"></path>
@@ -609,7 +609,7 @@ export const GuineaBissau = () => {
 
 export const Guinea = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
       <path fill="#ce1126" d="M0 0h900v600H0z"></path>
       <path fill="#fcd116" d="M300 0h600v600H300z"></path>
       <path fill="#009460" d="M600 0h300v600H600z"></path>
@@ -624,6 +624,7 @@ export const Kenya = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="900"
       height="600"
+      viewBox="0 0 900 600"
     >
       <defs>
         <path
@@ -704,7 +705,7 @@ export const Liberia = () => {
 
 export const Libya = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="960" height="480">
+    <svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480">
       <path fill="#239e46" d="M0 0H960V480H0z"></path>
       <path d="M0 0H960V360H0z"></path>
       <path fill="#e70013" d="M0 0H960V120H0z"></path>
@@ -717,7 +718,7 @@ export const Libya = () => {
 
 export const Madagascar = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
       <path fill="#007E3A" d="M0 0H900V600H0z"></path>
       <path fill="#FC3D32" d="M0 0H900V300H0z"></path>
       <path fill="#FFF" d="M0 0H300V600H0z"></path>
@@ -764,7 +765,7 @@ export const Malawi = () => {
 
 export const Mali = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
       <path fill="#ce1126" d="M0 0h900v600H0z"></path>
       <path fill="#fcd116" d="M0 0h600v600H0z"></path>
       <path fill="#14b53a" d="M0 0h300v600H0z"></path>
@@ -792,7 +793,7 @@ export const Mauritania = () => {
 
 export const Mauritius = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
       <path fill="#00a551" d="M0 0h900v600H0z"></path>
       <path fill="#ffd500" d="M0 0h900v450H0z"></path>
       <path fill="#1a206d" d="M0 0h900v300H0z"></path>
@@ -803,7 +804,7 @@ export const Mauritius = () => {
 
 export const Morocco = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
       <path fill="#c1272d" d="M0 0H900V600H0z"></path>
       <path
         fill="none"
@@ -817,7 +818,13 @@ export const Morocco = () => {
 
 export const Mozambique = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" version="1">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="900"
+      height="600"
+      version="1"
+      viewBox="0 0 900 600"
+    >
       <path d="M0 0H900V600H0z"></path>
       <path fill="#fff" d="M0 0H900V206.25H0z"></path>
       <path fill="#007168" d="M0 0H900V187.5H0z"></path>
@@ -888,7 +895,7 @@ export const Namibia = () => {
 
 export const Niger = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="700" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="700" height="600" viewBox="0 0 700 600">
       <path fill="#0DB02B" d="M0 0H700V600H0z"></path>
       <path fill="#FFF" d="M0 0H700V400H0z"></path>
       <path fill="#e05206" d="M0 0H700V200H0z"></path>
@@ -908,7 +915,7 @@ export const Nigeria = () => {
 
 export const RepublicOfCongo = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
       <path fill="#009543" d="M0 0h900v600H0z"></path>
       <path fill="#fbde4a" d="M0 600L600 0h300v600z"></path>
       <path fill="#dc241f" d="M900 0v600H300z"></path>
@@ -946,7 +953,13 @@ export const Rwanda = () => {
 
 export const SahrawiArabDemocraticRepublic = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" version="1">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="600"
+      height="300"
+      version="1"
+      viewBox="0 0 600 300"
+    >
       <path d="M0 0H600V150H0z"></path>
       <path fill="#007a3d" d="M0 150H600V300H0z"></path>
       <path fill="#fff" d="M0 100H600V200H0z"></path>
@@ -969,6 +982,7 @@ export const SaoTomeAndPrincipe = () => {
       width="2800"
       height="1400"
       version="1"
+      viewBox="0 0 2800 1400"
     >
       <path fill="#12ad2b" d="M0 0H2800V1400H0z"></path>
       <path fill="#ffce00" d="M0 400H2800V1000H0z"></path>
@@ -996,6 +1010,7 @@ export const Senegal = () => {
       width="900"
       height="600"
       version="1"
+      viewBox="0 0 900 600"
     >
       <path fill="#00853f" d="M0 0H900V600H0z"></path>
       <path fill="#fdef42" d="M300 0H900V600H300z"></path>
@@ -1016,7 +1031,7 @@ export const Senegal = () => {
 
 export const Seychelles = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="450">
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="450" viewBox="0 0 900 450">
       <path fill="#d62828" d="M0 450h900V0H0z"></path>
       <path fill="#fcd856" d="M0 450V0h600z"></path>
       <path fill="#003f87" d="M0 450V0h300z"></path>
@@ -1028,7 +1043,7 @@ export const Seychelles = () => {
 
 export const SierraLeone = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
       <path fill="#0072c6" d="M0 0h900v600H0z"></path>
       <path fill="#fff" d="M0 0h900v400H0z"></path>
       <path fill="#1eb53a" d="M0 0h900v200H0z"></path>
@@ -1107,7 +1122,7 @@ export const SouthSudan = () => {
 
 export const Sudan = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
       <path d="M0 0h1200v600H0z"></path>
       <path fill="#fff" d="M0 0h1200v400H0z"></path>
       <path fill="#d21034" d="M0 0h1200v200H0z"></path>
@@ -1141,6 +1156,7 @@ export const Togo = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="809"
       height="500"
+      viewBox="0 0 809 500"
     >
       <path fill="#006a4e" d="M0 0H809V500H0z"></path>
       <path fill="#ffce00" d="M0 100H809V200H0z"></path>
@@ -1175,7 +1191,7 @@ export const Tunisia = () => {
 
 export const Uganda = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
       <path d="M0 0H900V600H0z"></path>
       <path fill="#fcdc04" d="M0 100H900V300H0z"></path>
       <path fill="#d90000" d="M0 200H900V300H0z"></path>
@@ -1236,7 +1252,7 @@ export const Uganda = () => {
 
 export const Zambia = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1400">
+    <svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1400" viewBox="0 0 2100 1400">
       <path fill="#198a00" d="M0 0H2100V1400H0z"></path>
       <path fill="#de2010" d="M1350 500H1850V1400H1350z"></path>
       <path fill="#ef7d00" d="M1600 500H2100V1400H1600z"></path>
@@ -1266,6 +1282,7 @@ export const Zimbabwe = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="1260"
       height="630"
+      viewBox="0 0 1260 630"
     >
       <defs>
         <clipPath id="a">

@@ -57,24 +57,11 @@ import {
 
 export const herosInfo = [
   {
-    code: "NG",
-    data: [
-      {
-        name: "Oba Ovonramwen of Benin",
-        videoURL: "#",
-      },
-      {
-        name: "King Koko of Nembe",
-        videoURL: "#",
-      },
-    ],
-  },
-  {
     code: "BJ",
     data: [
       {
         name: "King Béhanzin",
-        videoURL: "#",
+        videoURL: "https://youtu.be/2-XWF2k9fgs",
       },
     ],
   },
@@ -83,16 +70,7 @@ export const herosInfo = [
     data: [
       {
         name: "Dedan Kimathi and the Mau Mau Resistance",
-        videoURL: "#",
-      },
-    ],
-  },
-  {
-    code: "DZ",
-    data: [
-      {
-        name: "King Béhanzin",
-        videoURL: "#",
+        videoURL: "https://youtu.be/QHLlrr2IPLo",
       },
     ],
   },
@@ -101,7 +79,7 @@ export const herosInfo = [
     data: [
       {
         name: "Cetshwayo kaMpande",
-        videoURL: "#",
+        videoURL: "https://youtu.be/UudoIjTMGfs",
       },
     ],
   },
@@ -109,8 +87,8 @@ export const herosInfo = [
     code: "NA",
     data: [
       {
-        name: "Cetshwayo kaMpande",
-        videoURL: "#",
+        name: "Samuel Maharero and the Heroro Tribe",
+        videoURL: "https://youtu.be/OSwRQTJcgB8",
       },
     ],
   },

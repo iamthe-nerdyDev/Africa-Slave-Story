@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useWebContext } from "../../context/ContextProvider";
 import { AlgeriaMap } from "../Map/tools/countries";
+import { herosInfo } from "../Map/tools";
 
 const SingleCountry: React.FC<{}> = () => {
-  const { toggleMute, isMuted, redirect, setParams, togglePlayAudio } = useWebContext();
+  type Heros = { name: string; videoURL: string };
+  type Data = { code: string; data: Heros[] };
+
+  const { toggleMute, isMuted, redirect, setParams, togglePlayAudio, value } = useWebContext();
 
   function goBack() {
     setParams({ isRedirect: true });
@@ -14,13 +18,32 @@ const SingleCountry: React.FC<{}> = () => {
     toggleMute();
   }
 
+  const [data, setData] = useState<Data>();
+  const [selectedIndex, setSelectedIndex] = useState<number>(1);
+  const [selectedVideoURL, setSelectedVideoURL] = useState<string>();
+
+  useEffect(() => {
+    if (value && value.code) setData(herosInfo.find((item) => item.code == value.code));
+    else redirect("/map");
+  }, [value]);
+
+  useEffect(() => {
+    if (data?.data && data.data.length > 0) setSelectedVideoURL(data.data[0].videoURL);
+  }, [data]);
+
+  useEffect(() => {
+    if (data && data.data[selectedIndex - 1]) {
+      setSelectedVideoURL(data.data[selectedIndex - 1].videoURL);
+    }
+  }, [selectedIndex]);
+
   return (
     <React.Fragment>
       <div className="heros-box">
         <div className="controls">
           <div onClick={toggleMute}>
             <span>
-              {isMuted ? (
+              {!isMuted ? (
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <path
                     id="SVGRepo_iconCarrier"
@@ -38,18 +61,16 @@ const SingleCountry: React.FC<{}> = () => {
 
           <div onClick={toggleMute}>
             <span>
-              {isMuted ? (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <path
-                    id="SVGRepo_iconCarrier"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 12.611L8.923 17.5 20 6.5"
-                  ></path>
-                </svg>
-              ) : null}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path
+                  id="SVGRepo_iconCarrier"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 12.611L8.923 17.5 20 6.5"
+                ></path>
+              </svg>
             </span>
             <p>Auto Scroll</p>
           </div>
@@ -71,12 +92,15 @@ const SingleCountry: React.FC<{}> = () => {
         </div>
 
         <div className="heros-lost">
-          <div className="active">
-            <p>Oba Ovonramwen of Benin</p>
-          </div>
-          <div>
-            <p>King Koko of Nembe</p>
-          </div>
+          {data?.data.map((item, i) => (
+            <div
+              onClick={() => setSelectedIndex(i + 1)}
+              className={selectedIndex == i + 1 ? "active" : ""}
+              key={`hero-${i}`}
+            >
+              <p>{item.name}</p>
+            </div>
+          ))}
         </div>
 
         <div className="main-single-country">
@@ -85,7 +109,7 @@ const SingleCountry: React.FC<{}> = () => {
 
         <div className="video">
           <iframe
-            src="https://www.youtube.com/embed/D2NkA-7WILc?si=raEQwlJJJpelEJ0Z"
+            src={selectedVideoURL}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />

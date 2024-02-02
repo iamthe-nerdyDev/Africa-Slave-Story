@@ -147,9 +147,9 @@ section.home .bottom .headphone svg {
 .type {
   line-height: 190%;
   display: inline;
-  background-color: #222;
+  /* background-color: #222; */
   font-size: 1.8rem;
-  padding: 0rem 1rem;
+  padding: 0rem;
 }
 
 .type-u {
@@ -374,7 +374,7 @@ section.home .bottom .headphone svg {
     transform: translateY(-50%);
     bottom: unset;
     border-radius: 0 20px 20px 0;
-    padding: 1rem 0.8rem;
+    padding: 1.5rem 0.8rem;
     padding-right: 1.2rem;
   }
 }
