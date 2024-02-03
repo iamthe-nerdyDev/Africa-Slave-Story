@@ -45,8 +45,8 @@ const Map: React.FC<{}> = () => {
   return (
     <React.Fragment>
       {displaySkip ? (
-        <p
-          className="skip"
+        <div
+          className="skipper"
           onClick={() => {
             setFinishedTyping(true);
             setParams({ finishedTyping: true });
@@ -54,8 +54,10 @@ const Map: React.FC<{}> = () => {
             setDisplaySkip(false);
           }}
         >
-          Skip <span>&raquo;</span>
-        </p>
+          <span>
+            Skip <span>&raquo;</span>
+          </span>
+        </div>
       ) : null}
 
       <div className={`typewriter-box ${finishedTyping ? "d-none" : "d-block"}`} ref={divRef}>

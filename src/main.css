@@ -338,14 +338,19 @@ section.home .bottom .headphone svg {
   z-index: 99;
 }
 
-.skip {
+.skipper {
   position: absolute;
   right: 1rem;
   top: 1rem;
-  color: dodgerblue;
+  color: var(--color);
   text-transform: uppercase;
-  border-bottom: 2px solid dodgerblue;
+  border-bottom: 2px solid var(--color);
   padding: 0.1rem 0.5rem;
+  cursor: pointer;
+  width: max-content;
+}
+
+.skipper > span {
   cursor: pointer;
 }
 
