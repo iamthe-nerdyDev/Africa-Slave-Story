@@ -113,16 +113,15 @@ section.home .intro span {
   cursor: pointer;
 }
 
-section.home .bottom {
-  gap: 1rem;
-  font-size: 1.2rem;
-}
+/* section.home .bottom {
+  margin-bottom: -2.7rem;
+} */
 
 section.home .bottom p {
   display: none;
 }
 
-section.home .bottom .headphone {
+/* section.home .bottom .headphone {
   background-color: var(--color);
   opacity: 0.99;
   width: 7rem;
@@ -132,23 +131,25 @@ section.home .bottom .headphone {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 section.home .bottom .headphone svg {
-  width: 3.5rem;
+  /* width: 3.5rem; */
+  width: 15rem;
+  margin-bottom: -6.4rem;
 }
 
 .typewriter-box {
   width: 100%;
   overflow-y: auto;
-  height: 100%;
+  margin-top: -0rem;
 }
 
 .type {
-  line-height: 190%;
+  line-height: 180%;
   display: inline;
   /* background-color: #222; */
-  font-size: 1.8rem;
+  font-size: 1.15rem;
   padding: 0rem;
 }
 
@@ -276,6 +277,20 @@ section.home .bottom .headphone svg {
 .map svg {
   width: 43rem;
   height: auto;
+  animation: zoom-in-zoom-out 8s ease infinite;
+  /* animation-timing-function: linear; */
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 .map svg path {

@@ -13,7 +13,7 @@ const Map: React.FC<{}> = () => {
     setSelectedCountryData(mapData.find((country) => country.code == selectedCountry));
   }, [selectedCountry]);
 
-  const { isMuted, toggleMute, value, setParams } = useWebContext();
+  const { isMuted, toggleMute, value, setParams, setVolume } = useWebContext();
 
   // const delimeter = `<p class="type-u"><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span></p>`;
   const delimeter = "<br/><br/>";
@@ -76,11 +76,11 @@ const Map: React.FC<{}> = () => {
               .typeString(
                 "<p class='type'>In the beginning, Africa knew its own tune, A continent dancing beneath the moon. Yet, the winds of change began to blow, As history unfolded, a tale of ebb and flow.</p>"
               )
-              .pasteString(delimeter, null)
               .pauseFor(2000)
               .callFunction(() => {
                 setFinishedTyping(true);
                 setParams({ finishedTyping: true });
+                setVolume(1);
               })
               .start();
           }}

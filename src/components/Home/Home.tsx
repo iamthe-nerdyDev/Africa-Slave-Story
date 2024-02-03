@@ -3,7 +3,7 @@ import { Africa, Headphone } from "../../icons";
 import { useWebContext } from "../../context/ContextProvider";
 
 const Home: React.FC<{}> = () => {
-  const { redirect, togglePlayAudio } = useWebContext();
+  const { redirect, togglePlayAudio, setVolume } = useWebContext();
 
   return (
     <section className="home">
@@ -21,6 +21,7 @@ const Home: React.FC<{}> = () => {
             <span
               onClick={() => {
                 togglePlayAudio();
+                setVolume(0.15);
                 redirect("/map");
               }}
             >
@@ -33,7 +34,6 @@ const Home: React.FC<{}> = () => {
           <div className="headphone">
             <Headphone />
           </div>
-          <p>Audio inclusive, please put on headphone</p>
         </div>
       </div>
     </section>

@@ -5,6 +5,8 @@ export type ContextProps = {
   playAudio: boolean;
   value?: { [key: string]: any };
   isMuted: boolean;
+  volume: number;
+  setVolume: React.Dispatch<React.SetStateAction<number>>;
   toggleMute: () => void;
   redirect: (to: string) => void;
   setParams: (param: { [key: string]: any }) => void;
@@ -15,6 +17,8 @@ const WebContext = createContext<ContextProps>({
   page: "/",
   playAudio: false,
   isMuted: false,
+  volume: 1,
+  setVolume() {},
   toggleMute() {},
   redirect() {},
   setParams() {},
@@ -30,6 +34,7 @@ const WebProvider: React.FC<Props> = (props) => {
   const [isMuted, setIsMuted] = useState<boolean>(false);
   const [value, setValue] = useState<ContextProps["value"]>();
   const [playAudio, setPlayAudio] = useState<boolean>(false);
+  const [volume, setVolume] = useState<number>(1);
 
   const toggleMute = () => setIsMuted(!isMuted);
   const redirect = (to: string) => setPage(to);
@@ -43,6 +48,8 @@ const WebProvider: React.FC<Props> = (props) => {
         value,
         isMuted,
         playAudio,
+        volume,
+        setVolume,
         toggleMute,
         redirect,
         setParams,

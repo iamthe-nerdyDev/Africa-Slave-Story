@@ -57,11 +57,24 @@ import {
 
 export const herosInfo = [
   {
+    code: "NG",
+    data: [
+      {
+        name: "The Benin Kingdom",
+        videoURL: "https://www.youtube.com/embed/OJSp-iiwaRk?si=OFp9aSKnm8BEBNTnk",
+      },
+      {
+        name: "Nembe Kingdom",
+        videoURL: "https://www.youtube.com/embed/u6Baw0YUMUw?si=VDhJi_cJVli3FDpk",
+      },
+    ],
+  },
+  {
     code: "BJ",
     data: [
       {
         name: "King Béhanzin",
-        videoURL: "https://youtu.be/2-XWF2k9fgs",
+        videoURL: "https://www.youtube.com/embed/2-XWF2k9fgs?si=MTQjojRPnCPVl6jA",
       },
     ],
   },
@@ -70,7 +83,7 @@ export const herosInfo = [
     data: [
       {
         name: "Dedan Kimathi and the Mau Mau Resistance",
-        videoURL: "https://youtu.be/QHLlrr2IPLo",
+        videoURL: "https://www.youtube.com/embed/QHLlrr2IPLo?si=O1R0FnWR052Ud4O4",
       },
     ],
   },
@@ -79,7 +92,7 @@ export const herosInfo = [
     data: [
       {
         name: "Cetshwayo kaMpande",
-        videoURL: "https://youtu.be/UudoIjTMGfs",
+        videoURL: "https://www.youtube.com/embed/UudoIjTMGfs?si=yNGwsPEGO8L6Ms-p",
       },
     ],
   },
@@ -88,7 +101,7 @@ export const herosInfo = [
     data: [
       {
         name: "Samuel Maharero and the Heroro Tribe",
-        videoURL: "https://youtu.be/OSwRQTJcgB8",
+        videoURL: "https://www.youtube.com/embed/OSwRQTJcgB8?si=nPBYQLjR-ZNhqUVq",
       },
     ],
   },

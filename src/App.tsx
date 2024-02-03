@@ -7,7 +7,7 @@ import TypingAudio from "./assets/typing.mp3";
 import "./main.css";
 
 const App: React.FC<{}> = () => {
-  const { playAudio, isMuted, page, value } = useWebContext();
+  const { playAudio, isMuted, page, value, volume } = useWebContext();
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const typingAudio = useRef<HTMLAudioElement>(null);
@@ -18,6 +18,8 @@ const App: React.FC<{}> = () => {
     if (audioElement) {
       audioElement.muted = isMuted;
 
+      audioElement.volume = volume;
+
       if (playAudio) audioElement.play();
       else audioElement.pause();
     }
@@ -27,7 +29,10 @@ const App: React.FC<{}> = () => {
     const typingElement = typingAudio.current;
 
     if (page == "/map" && !value) {
-      if (typingElement) typingElement.play();
+      if (typingElement) {
+        typingElement.volume = 1;
+        typingElement.play();
+      }
     }
 
     if (page == "/map" && value && value.finishedTyping == true) {
@@ -35,7 +40,7 @@ const App: React.FC<{}> = () => {
     }
   }, [page, value]);
 
-  useEffect(() => handlePlay(), [isMuted, playAudio]);
+  useEffect(() => handlePlay(), [isMuted, playAudio, volume]);
 
   return (
     <React.Fragment>

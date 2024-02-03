@@ -663,31 +663,6 @@ const AfricaMap: React.FC<Props> = ({ setSelectedCountry }) => {
           ry="0.408"
         ></ellipse>
       </g>
-      <g stroke="#000" strokeWidth="0" transform="matrix(2.08595 0 0 2.08595 -113.954 -151.26)">
-        <ellipse
-          cx="91.983"
-          cy="87.48"
-          fill="rgba(255, 5, 5, 0.137)"
-          rx="1.717"
-          ry="1.717"
-        ></ellipse>
-        <ellipse
-          cx="91.983"
-          cy="87.48"
-          fill="rgba(255, 0, 0, 0.255)"
-          rx="1.112"
-          ry="1.112"
-        ></ellipse>
-        <ellipse
-          cx="91.983"
-          cy="87.48"
-          fill="red"
-          fillRule="evenodd"
-          paintOrder="stroke"
-          rx="0.408"
-          ry="0.408"
-        ></ellipse>
-      </g>
       <g stroke="#000" strokeWidth="0" transform="matrix(2.04774 0 0 2.04774 -49.381 19.708)">
         <ellipse
           cx="91.983"
