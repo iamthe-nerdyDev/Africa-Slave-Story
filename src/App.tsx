@@ -7,7 +7,7 @@ import TypingAudio from "./assets/typing.mp3";
 import "./main.css";
 
 const App: React.FC<{}> = () => {
-  const { playAudio, isMuted, page, value, volume } = useWebContext();
+  const { playAudio, isMuted, page, value, volume, redirect, setParams } = useWebContext();
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const typingAudio = useRef<HTMLAudioElement>(null);
@@ -67,6 +67,16 @@ const App: React.FC<{}> = () => {
         <source src={TypingAudio} type="audio/mp3" />
         Your browser does not support the audio tag.
       </audio>
+
+      <p
+        className="reference-link"
+        onClick={() => {
+          setParams({ ...value, previous: page });
+          redirect("/references");
+        }}
+      >
+        View References
+      </p>
     </React.Fragment>
   );
 };

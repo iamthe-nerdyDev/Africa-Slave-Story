@@ -1,6 +1,6 @@
 import React from "react";
 import { useWebContext } from "../../context/ContextProvider";
-import { Home, Map, SingleCountry } from "..";
+import { Home, Map, References, SingleCountry } from "..";
 
 const Router: React.FC<{}> = () => {
   const { page, value } = useWebContext();
@@ -11,6 +11,8 @@ const Router: React.FC<{}> = () => {
     <Map />
   ) : page === "/single-country" && value ? (
     <SingleCountry />
+  ) : page === "/references" ? (
+    <References />
   ) : (
     "how did you get here?????"
   );

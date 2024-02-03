@@ -54,10 +54,12 @@ import {
   Zambia,
   Zimbabwe,
 } from "./Flags";
+import { BeninRepublicMap, KenyaMap, NamibiaMap, NigeriaMap, SouthAfricaMap } from "./countries";
 
 export const herosInfo = [
   {
     code: "NG",
+    map: <NigeriaMap />,
     data: [
       {
         name: "The Benin Kingdom",
@@ -71,6 +73,7 @@ export const herosInfo = [
   },
   {
     code: "BJ",
+    map: <BeninRepublicMap />,
     data: [
       {
         name: "King Béhanzin",
@@ -80,6 +83,7 @@ export const herosInfo = [
   },
   {
     code: "KE",
+    map: <KenyaMap />,
     data: [
       {
         name: "Dedan Kimathi and the Mau Mau Resistance",
@@ -89,6 +93,7 @@ export const herosInfo = [
   },
   {
     code: "ZA",
+    map: <SouthAfricaMap />,
     data: [
       {
         name: "Cetshwayo kaMpande",
@@ -98,6 +103,7 @@ export const herosInfo = [
   },
   {
     code: "NA",
+    map: <NamibiaMap />,
     data: [
       {
         name: "Samuel Maharero and the Heroro Tribe",

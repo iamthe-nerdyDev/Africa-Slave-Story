@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useWebContext } from "../../context/ContextProvider";
-import { AlgeriaMap } from "../Map/tools/countries";
 import { herosInfo } from "../Map/tools";
 
 const SingleCountry: React.FC<{}> = () => {
   type Heros = { name: string; videoURL: string };
-  type Data = { code: string; data: Heros[] };
+  type Data = { code: string; map: JSX.Element; data: Heros[] };
 
   const { toggleMute, isMuted, redirect, setParams, togglePlayAudio, value } = useWebContext();
 
@@ -103,9 +102,7 @@ const SingleCountry: React.FC<{}> = () => {
           ))}
         </div>
 
-        <div className="main-single-country">
-          <AlgeriaMap />
-        </div>
+        <div className="main-single-country">{data?.map}</div>
 
         <div className="video">
           <iframe

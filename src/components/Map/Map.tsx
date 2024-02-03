@@ -8,6 +8,7 @@ const Map: React.FC<{}> = () => {
   const [finishedTyping, setFinishedTyping] = useState<boolean>(false);
   const [selectedCountry, setSelectedCountry] = useState<string>();
   const [selectedCountryData, setSelectedCountryData] = useState<MapData>();
+  const [displaySkip, setDisplaySkip] = useState<boolean>(false);
 
   useEffect(() => {
     setSelectedCountryData(mapData.find((country) => country.code == selectedCountry));
@@ -19,7 +20,10 @@ const Map: React.FC<{}> = () => {
   const delimeter = "<br/><br/>";
 
   useEffect(() => {
-    if (value && value.isRedirect == true) setFinishedTyping(true);
+    if (value && value.isRedirect == true) {
+      setFinishedTyping(true);
+      setDisplaySkip(false);
+    }
   }, [value]);
 
   const divRef = useRef<any>(null);
@@ -40,33 +44,36 @@ const Map: React.FC<{}> = () => {
 
   return (
     <React.Fragment>
+      {displaySkip ? (
+        <p
+          className="skip"
+          onClick={() => {
+            setFinishedTyping(true);
+            setParams({ finishedTyping: true });
+            setVolume(1);
+            setDisplaySkip(false);
+          }}
+        >
+          Skip <span>&raquo;</span>
+        </p>
+      ) : null}
+
       <div className={`typewriter-box ${finishedTyping ? "d-none" : "d-block"}`} ref={divRef}>
         <Typewriter
           options={{ delay: 40 }}
           onInit={(typewriter) => {
             typewriter
               .typeString(
-                "<p class='type'>In the beginning, Africa stood proud, A land of untold tales, strong and loud. Under the vast sky, a continent&apos;s embrace, Rich cultures woven, each in its own grace.</p>"
+                "<p class='type'>In the beginning, Africa stood proud, A land of untold tales, strong and loud. Under the vast sky, a continent&apos;s embrace, Rich cultures woven, each in its own grace. Savannas stretched with a golden hue, Mountains whispered tales, ancient and true. Rivers carved stories through the ancient land, Nature&apos;s masterpiece, crafted by a divine hand.</p>"
+              )
+              .callFunction(() => setDisplaySkip(true))
+              .pasteString(delimeter, null)
+              .typeString(
+                "<p class='type'>In the heart, the drumbeats of a thousand tribes, Echoes of unity in diverse vibes. The sun painted patterns on the desert's face, A dance of resilience, a rhythmic trace. Forests whispered secrets to the open air, Where every creature found its haven and lair. Elephants roamed in majestic might, A symphony of life, a harmonious sight.</p>"
               )
               .pasteString(delimeter, null)
               .typeString(
-                "<p class='type'>Savannas stretched with a golden hue, Mountains whispered tales, ancient and true. Rivers carved stories through the ancient land, Nature&apos;s masterpiece, crafted by a divine hand.</p>"
-              )
-              .pasteString(delimeter, null)
-              .typeString(
-                "<p class='type'>In the heart, the drumbeats of a thousand tribes, Echoes of unity in diverse vibes. The sun painted patterns on the desert's face, A dance of resilience, a rhythmic trace.</p>"
-              )
-              .pasteString(delimeter, null)
-              .typeString(
-                "<p class='type'>Forests whispered secrets to the open air, Where every creature found its haven and lair. Elephants roamed in majestic might, A symphony of life, a harmonious sight.</p>"
-              )
-              .pasteString(delimeter, null)
-              .typeString(
-                "<p class='type'>Great Zimbabwe rose with stones that speak, Of a civilization strong, not meek. Timbuktu&apos;s wisdom flowed in written streams, A wealth of knowledge, beyond wildest dreams.</p>"
-              )
-              .pasteString(delimeter, null)
-              .typeString(
-                "<p class='type'>Great Benin rose with stones that speak, Of a kingdom strong, not meek. Ife&apos;s wisdom flowed in artistic streams, A wealth of culture, beyond wildest dreams.</p>"
+                "<p class='type'>Great Zimbabwe rose with stones that speak, Of a civilization strong, not meek. Timbuktu&apos;s wisdom flowed in written streams, A wealth of knowledge, beyond wildest dreams. Great Benin rose with stones that speak, Of a kingdom strong, not meek. Ife&apos;s wisdom flowed in artistic streams, A wealth of culture, beyond wildest dreams.</p>"
               )
               .pasteString(delimeter, null)
               .typeString(
@@ -80,6 +87,7 @@ const Map: React.FC<{}> = () => {
               .callFunction(() => {
                 setFinishedTyping(true);
                 setParams({ finishedTyping: true });
+                setDisplaySkip(false);
                 setVolume(1);
               })
               .start();

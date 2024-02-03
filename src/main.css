@@ -11,7 +11,12 @@
 
 body {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  /* background-color: #000; */
+  background-color: #000;
+  background-attachment: fixed;
+  background-image: url("/bg-2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: var(--color);
 }
 
@@ -84,6 +89,15 @@ section.home .main {
   overflow: hidden;
 }
 
+section.home .main.r {
+  justify-content: flex-start;
+  gap: 1.4rem;
+}
+
+section.home .main.r .title {
+  font-size: 2rem;
+}
+
 @media screen and (min-width: 992px) {
   section.home .main {
     justify-content: space-between;
@@ -100,6 +114,24 @@ section.home .header h1 {
 
 section.home .header svg {
   width: calc(1vw + 5rem);
+}
+
+.refs {
+  width: 90%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.refs > div {
+  display: inline;
+  width: max-content;
+}
+
+.refs img {
+  width: 80%;
 }
 
 section.home .intro p {
@@ -135,8 +167,8 @@ section.home .bottom p {
 
 section.home .bottom .headphone svg {
   /* width: 3.5rem; */
-  width: 15rem;
-  margin-bottom: -6.4rem;
+  width: 14rem;
+  margin-bottom: -6.8rem;
 }
 
 .typewriter-box {
@@ -146,10 +178,10 @@ section.home .bottom .headphone svg {
 }
 
 .type {
-  line-height: 180%;
+  line-height: 220%;
   display: inline;
   /* background-color: #222; */
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   padding: 0rem;
 }
 
@@ -277,7 +309,7 @@ section.home .bottom .headphone svg {
 .map svg {
   width: 43rem;
   height: auto;
-  animation: zoom-in-zoom-out 8s ease infinite;
+  animation: zoom-in-zoom-out 5s ease infinite;
   /* animation-timing-function: linear; */
 }
 
@@ -291,6 +323,30 @@ section.home .bottom .headphone svg {
   100% {
     transform: scale(1, 1);
   }
+}
+
+.reference-link {
+  position: fixed;
+  width: max-content;
+  border: 1px solid var(--color);
+  padding: 0.55rem 1.15rem;
+  cursor: pointer;
+  background-color: #000;
+  border-radius: 5px;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 99;
+}
+
+.skip {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: dodgerblue;
+  text-transform: uppercase;
+  border-bottom: 2px solid dodgerblue;
+  padding: 0.1rem 0.5rem;
+  cursor: pointer;
 }
 
 .map svg path {
@@ -347,11 +403,13 @@ section.home .bottom .headphone svg {
   text-transform: uppercase;
 }
 
-.heros-box .back-arrow {
+.back-arrow {
   position: absolute;
   top: 2.5rem;
   left: 3rem;
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  background-color: #000;
+  border: 1px solid var(--color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -361,7 +419,7 @@ section.home .bottom .headphone svg {
   border-radius: 50%;
 }
 
-.heros-box .back-arrow svg {
+.back-arrow svg {
   width: 1.25rem;
   height: auto;
   fill: var(--color);
