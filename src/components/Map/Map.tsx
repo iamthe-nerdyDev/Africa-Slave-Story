@@ -5,7 +5,7 @@ import AfricaMap from "./tools/AfricaMap";
 import { MapData, mapData } from "./tools";
 
 const Map: React.FC<{}> = () => {
-  const [finishedTyping, setFinishedTyping] = useState<boolean>(true);
+  const [finishedTyping, setFinishedTyping] = useState<boolean>(false);
   const [selectedCountry, setSelectedCountry] = useState<string>();
   const [selectedCountryData, setSelectedCountryData] = useState<MapData>();
 
